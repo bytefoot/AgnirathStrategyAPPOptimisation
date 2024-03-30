@@ -26,7 +26,7 @@ pip install -r requirements.txt
    THe code will first run model to figure out optimisation and then display the optimal strategies in a window (using matplotlib)
 
 ## Analysis
-The profile seem to vary on varying maximum battery charge at begining. Hence I've changed the batttery charge to obtain different strategies.
+The profile seem to vary on varying maximum battery charge at begining, as it tends to be coem a limit factor. Hence I've changed the batttery charge to obtain different strategies, to just play arround and check the rigorousness of the model.
 
 #### With 0.0001J
 ![0.0001J](/assets/0.0001.png)
