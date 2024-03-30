@@ -25,5 +25,14 @@ pip install -r requirements.txt
    ```
    THe code will first run model to figure out optimisation and then display the optimal strategies in a window (using matplotlib)
 
----
-Feel free to reach out with any questions or suggestions! 🚀
+## Analysis
+The profile seem to vary on varying maximum battery charge at begining. Hence I've changed the batttery charge to obtain different strategies.
+
+#### With 0.0001J
+![0.0001J](/assets/0.0001.png)
+
+#### With 0.1J
+![0.1J](/assets/0.1.png)
+
+#### With 1J
+![1J](/assets/1.png)
