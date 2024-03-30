@@ -9,7 +9,7 @@ class CarData:
     aero_drag = 0.12 * 1  # SI
     fric_coeff = 0.045  # SI
 
-    max_battery_capacity = 0.0001 * UnitScale.kWh
+    max_battery_capacity = 0.1 * UnitScale.kWh
 
     motor_efficiency = 0.98
 
