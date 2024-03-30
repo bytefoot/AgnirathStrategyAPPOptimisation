@@ -14,11 +14,8 @@ hourly_solar_irradiance_sample = [164, 403, 637, 851, 986, 1046, 1029, 936, 776,
 num_intervals = T // (len(hourly_solar_irradiance_sample) - 1) // DT
 
 # actual interpolation
-_solar_irradiance_prediction = tf.constant([
+solar_irradiance_profile = tf.constant([
     augmented_data
     for start_v, end_v in pairwise(hourly_solar_irradiance_sample)
     for augmented_data in np.linspace(start_v, end_v, num_intervals)
 ], dtype=tf.float32)
-
-# Reducing the dimension of the solar_irradiance to fit with power_profile
-solar_irradiance_profile = (_solar_irradiance_prediction[1:] + _solar_irradiance_prediction[:-1]) / 2
