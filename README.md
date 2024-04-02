@@ -28,17 +28,13 @@ pip install -r requirements.txt
 ## Analysis
 The profile seem to vary on varying maximum battery charge at begining, as it tends to become a limit factor. Hence I've changed the batttery charge to obtain different strategies, to just play arround and check the rigorousness of the model.
 
-### With 0.00009J
-![0.00009J](/assets/0.00009.png)
+### With 0.001J
+![0.001J](/assets/0.001.png)
 
-This graph showcases the model very well. First, the model accelertes for a short time to gain afinite velocity and then it maintains the constatn velocity of a short period while gaining power. Then once it attains a bit more power, it again does the same and goes to a higher velocity.
-This step like behavious keeps decreasing as the solar irradiance increases. Eventually it decides on an optimum velocity to maintain to maximise distance travelled.
+This graph showcases the model very well. First, the model accelertes for a short time to gain afinite velocity and then it maintains the constatn velocity of a short period while gaining power. Then once it attains a bit more power, it again does the same and goes to a higher velocity. Eventually it decides on an optimum velocity to maintain to maximise distance travelled.
 
-### With 0.0001J
-![0.0001J](/assets/0.0001.png)
+### With 0.01J
+![0.01J](/assets/0.01.png)
 
-### With 0.1J
-![0.1J](/assets/0.1.png)
-
-### With 1J
-![1J](/assets/1.png)
+### With 5.1J
+![5.1J](/assets/5.1.png)

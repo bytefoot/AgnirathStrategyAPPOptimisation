@@ -68,40 +68,35 @@ print("Please resize window to increase scale of graphs.")
 print("Close the plot window to exit program.")
 
 ax = plt.subplot(3, 1, 1)
-plt.plot(np.arange(len(optimized_velocity_profile))*DT, optimized_velocity_profile)
+plt.plot(np.arange(len(optimized_velocity_profile))*DT/60, optimized_velocity_profile)
 plt.title("Velocity Profile")
-plt.xticks(np.arange(T//N + 1)*N)
 ax.set_xlabel("Time (min)")
 ax.set_ylabel("Velocity (m/s)")
 
 ax = plt.subplot(3, 2, 3)
-plt.plot(np.arange(len(battery_profile))*DT, battery_profile)
+plt.plot(np.arange(len(battery_profile))*DT/60, battery_profile)
 plt.title("Battery Profile")
 ax.spines['left'].set_position(('data', 0))  # Set left spine position to x=0
 ax.spines['bottom'].set_position(('data', 0))  # Set bottom spine position to y=0
-plt.xticks(np.arange(T//N + 1)*N)
 ax.set_xlabel("Time (min)")
 ax.set_ylabel("Energy (J)")
 
 
 ax = plt.subplot(3, 2, 4)
-plt.plot(np.arange(len(acceleration_profile))*DT, acceleration_profile)
+plt.plot(np.arange(len(acceleration_profile))*DT/60, acceleration_profile)
 plt.title("Acceleration Profile")
-plt.xticks(np.arange(T//N + 1)*N)
 ax.set_xlabel("Time (min)")
 ax.set_ylabel("Acceleration (m/s^2)")
 
 ax = plt.subplot(3, 2, 5)
-plt.plot(np.arange(len(distance_profile))*DT, distance_profile)
+plt.plot(np.arange(len(distance_profile))*DT/60, distance_profile)
 plt.title("Distance Profile")
-plt.xticks(np.arange(T//N + 1)*N)
 ax.set_xlabel("Time (min)")
 ax.set_ylabel("Distance (m)")
 
 ax = plt.subplot(3, 2, 6)
-plt.plot(np.arange(len(solar_irradiance_profile))*DT, solar_irradiance_profile)
+plt.plot(np.arange(len(solar_irradiance_profile))*DT/60, solar_irradiance_profile)
 plt.title("Solar Irradiance Profile")
-plt.xticks(np.arange(T//N + 1)*N)
 ax.set_xlabel("Time (min)")
 ax.set_ylabel("Irradiance (J/m^2)")
 

@@ -7,9 +7,9 @@ class UnitScale:
 class CarData:
     mass = 280  # kgs
     aero_drag = 0.12 * 1  # SI
-    fric_coeff = 0.045  # SI
+    fric_coeff = 0.0045  # SI
 
-    max_battery_capacity = 0.00009 * UnitScale.kWh
+    max_battery_capacity = 0.001 * UnitScale.kWh
 
     motor_efficiency = 0.98
 
