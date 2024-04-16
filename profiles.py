@@ -1,7 +1,9 @@
 import tensorflow as tf
+import numpy as np
 
 from config import DT
 from constants import CarData, Physics
+from inclination import net_resistive_incline_coefficient
 
 def calc_distance_profile(velocity_profile):
     return tf.cumsum((velocity_profile[:-1] + velocity_profile[1:]) / 2 * DT)
@@ -13,7 +15,7 @@ def calc_acceleration_profile(velocity_profile):
     return (velocity_profile[1:] - velocity_profile[:-1]) / DT
 
 def power_equation(accleration, velocity):
-    return CarData.mass*accleration*velocity + CarData.aero_drag*(velocity**3) + CarData.fric_coeff*CarData.mass*Physics.g*velocity
+    return (CarData.mass * accleration * velocity) + CarData.aero_drag * (velocity**3) + (net_resistive_incline_coefficient * CarData.mass * Physics.g) * velocity
 
 def calc_power_profile(_velocity_profile, acceleration_profile):
     velocity_profile = (_velocity_profile[:-1] + _velocity_profile[1:]) / 2

@@ -12,6 +12,7 @@ from profiles import (
 )
 import constraints as Constraints
 from solar import solar_irradiance_profile
+from inclination import _inclination_profile_degrees
 
 INIT_VELOCITY = tf.constant([0.0])
 # Initialize optimizer (Adam optimizer)
@@ -89,10 +90,10 @@ ax.set_xlabel("Time (min)")
 ax.set_ylabel("Acceleration (m/s^2)")
 
 ax = plt.subplot(3, 2, 5)
-plt.plot(np.arange(len(distance_profile))*DT/60, distance_profile)
-plt.title("Distance Profile")
+plt.plot(np.arange(len(_inclination_profile_degrees))*DT/60, _inclination_profile_degrees)
+plt.title("Inclination Profile")
 ax.set_xlabel("Time (min)")
-ax.set_ylabel("Distance (m)")
+ax.set_ylabel("Angle (degrees)")
 
 ax = plt.subplot(3, 2, 6)
 plt.plot(np.arange(len(solar_irradiance_profile))*DT/60, solar_irradiance_profile)
