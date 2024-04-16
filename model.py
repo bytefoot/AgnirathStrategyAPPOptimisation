@@ -76,8 +76,8 @@ ax.set_ylabel("Velocity (m/s)")
 ax = plt.subplot(3, 2, 3)
 plt.plot(np.arange(len(battery_profile))*DT/60, battery_profile)
 plt.title("Battery Profile")
-ax.spines['left'].set_position(('data', 0))  # Set left spine position to x=0
-ax.spines['bottom'].set_position(('data', 0))  # Set bottom spine position to y=0
+# ax.spines['left'].set_position(('data', 0))  # Set left spine position to x=0
+# ax.spines['bottom'].set_position(('data', 0))  # Set bottom spine position to y=0
 ax.set_xlabel("Time (min)")
 ax.set_ylabel("Energy (J)")
 

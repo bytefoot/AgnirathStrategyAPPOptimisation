@@ -22,4 +22,5 @@ def calc_power_profile(_velocity_profile, acceleration_profile):
 
 def calc_battery_profile(max_cap, v_profile, a_prof, s_prof):
     pp = calc_power_profile(v_profile, a_prof)
-    return max_cap + tf.cumsum( - pp*DT + s_prof*CarData.panel_area)
+    ideal_battery_profile = tf.ones_like(v_profile) * max_cap
+    return ideal_battery_profile - tf.pad(tf.cumsum(pp*DT + s_prof*CarData.panel_area), [[1, 0]])
